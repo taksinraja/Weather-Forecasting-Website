@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- icon -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <!-- map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="weather-info">
+            <div class="name_condition">
+                <div class="citydate">
+                    <h2 id="cityName" class="cityname"></h2>
+                    <p id="country"></p>
+                </div>
+                <div class="weather_icon">
+                    <img id="weatherIcon" src="" alt="Weather Icon">
+                    <p id="weatherCondition"></p>
+                </div>
+            </div>
+            
+            <p id="temperature" class="tempa"></p>
+            <div class="city-time" id="dateTime"></div>
+
+            
+            
+        </div>
+        <div class="panel">
+            <div class="search-panel">
+                <input type="text" id="cityInput" placeholder="Search">
+                <button id="searchButton"><i class="fa fa-search"></i></button>
+            </div>
+          <div class="forecast-container-wrapper">
+            <h3>5-Days Forecasr</h3>
+            <div id="forecast" class="forecast-container">
+              
+            </div>
+          </div>
+            
+  
+            <div id="additionalInfo" class="additional-info">
+                <div class="info-box">
+                    <img id="monsoonIcon" src="" alt="Monsoon Icon">
+                    <p id="monsoon"></p>
+                </div>
+                <div class="info-box">
+                    <img id="humidityIcon" src="https://img.icons8.com/ios-filled/50/000000/humidity.png" alt="Humidity Icon">
+                    <p id="humidity"></p>
+                </div>
+                <div class="info-box">
+                    <img id="windSpeedIcon" src="https://img.icons8.com/ios-filled/50/000000/wind.png" alt="Wind Speed Icon">
+                    <!-- <i style='font-size:24px' class='fas'>&#xf72e;</i> -->
+                    <p id="windSpeed"></p>
+                </div>
+                <div class="info-box">
+                    <img id="airQualityIcon" src="https://img.icons8.com/ios-filled/50/000000/air-quality.png" alt="Air Quality Icon">
+                    <p id="airQuality"></p>
+                </div>
+                <div class="info-box">
+                    <img id="pressureIcon" src="https://img.icons8.com/ios-filled/50/000000/pressure.png" alt="Pressure Icon">
+                    <p id="pressure"></p>
+                </div>
+            </div>
+            <div id="map" style="height: 300px;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
